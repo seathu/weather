@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+        #search-section, #current-weather, #forecast {
+            margin: 20px 0;
+        }
+        #city-input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .weather-info, .forecast-info {
+            padding: 10px;
+            background-color: #f0f8ff;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .forecast-info {
+            text-align: center;
+        }
+        .forecast-grid {
+            display: flex;
+            justify-content: space-between;
+        }
+        #recent-searches {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Weather Dashboard</h1>
+
+        <!-- Search section -->
+        <div id="search-section">
+            <input id="city-input" type="text" placeholder="Enter a City Name" />
+            <button id="search-btn">Search</button>
+            <button id="location-btn">Use Current Location</button>
+
+            <!-- Dropdown for recently searched cities -->
+            <select id="recent-searches">
+                <!-- Recently searched cities will be added here -->
+            </select>
+        </div>
+
+        <!-- Current weather section -->
+        <div id="current-weather" class="weather-info">
+            <h2 id="city-name">City Name</h2>
+            <p id="date">Date</p>
+            <p id="temp">Temperature: 0°C</p>
+            <p id="weather-icon">☀️</p>
+            <p id="wind">Wind Speed: 0 m/s</p>
+            <p id="humidity">Humidity: 0%</p>
+        </div>
+
+        <!-- 5-day forecast section -->
+        <div id="forecast">
+            <h2>5-Day Forecast</h2>
+            <div id="forecast-container" class="forecast-grid">
+                <!-- Forecast data will be dynamically injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript file linked -->
+    <script src="app.js"></script>
+</body>
+</html>
